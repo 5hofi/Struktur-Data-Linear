@@ -1,0 +1,15 @@
+from collections import deque
+
+antrian = deque()
+
+# tambah mahasiswa
+antrian.append("Ani")
+antrian.append("Budi")
+antrian.append("Cici")
+
+print("Antrian awal:", list(antrian))
+
+# melayani mahasiswa
+keluar = antrian.popleft()
+print("Dilayani:", keluar)
+print("Sisa antrian:", list(antrian))
