@@ -1,19 +1,11 @@
 def balik_kata(kata):
     stack = []
-
-    # masukkan huruf ke stack
-    for huruf in kata:
-        stack.append(huruf)
-
-    hasil = ""
-
-    # keluarkan dari stack (dibalik)
+    for balik in kata:
+        stack.append(balik)
+    hasil = " "
     while stack:
         hasil += stack.pop()
-
     return hasil
-
-
-# contoh
-kata = input("Masukkan kata: ")
-print("Hasil:", balik_kata(kata))
+kata = "bulan"
+print("Kata asli: ", kata)
+print("Kata terbalik: ", balik_kata(kata))
