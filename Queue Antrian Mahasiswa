@@ -1,15 +1,19 @@
 from collections import deque
-
-antrian = deque()
-
-# tambah mahasiswa
-antrian.append("Ani")
-antrian.append("Budi")
-antrian.append("Cici")
-
-print("Antrian awal:", list(antrian))
-
-# melayani mahasiswa
-keluar = antrian.popleft()
-print("Dilayani:", keluar)
-print("Sisa antrian:", list(antrian))
+queue = deque()
+def enqueue(nama):
+    queue.append(nama)
+    print(nama, "telah masuk kedalam antrian.")
+def dequeue():
+    if queue:
+        nama = queue.popleft()
+        print(nama,"telah dilayani dan keluar dari antrian.")
+    else:
+        print("Antrian kosong, tidak ada yang bisa dilayani,")
+def tampilkan():
+    print("Antrian saat ini: ", queue)
+enqueue("Opi")
+enqueue("Ila")
+enqueue("Dwi")
+tampilkan()
+dequeue()
+tampilkan()
